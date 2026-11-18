@@ -1,0 +1,25 @@
+{
+  "hooks": [
+    {
+      "action": {
+        "command": "bash scripts/check.sh",
+        "type": "command"
+      },
+      "description": "After the agent saves any JS, HTML, or CSS file, syntax-check all JS files and run the full test suite so regressions surface immediately.",
+      "matcher": "\\.(js|html|css)$",
+      "name": "Check and test on save",
+      "timeout": 120,
+      "trigger": "PostFileSave"
+    },
+    {
+      "action": {
+        "prompt": "The spec task just finished. Update the checkbox for this task in the spec's tasks.md (mark it [x] only if it is truly complete and verified), and append a short note there if the implementation deviated from design.md in any way.",
+        "type": "agent"
+      },
+      "description": "After a spec task finishes, remind the agent to update the tasks.md checkbox and record any deviation from the design.",
+      "name": "Keep spec tasks in sync",
+      "trigger": "PostTaskExec"
+    }
+  ],
+  "version": "v1"
+}
