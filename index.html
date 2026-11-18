@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>STACKS — HyperCard, resurrected</title>
+<meta name="description" content="STACKS resurrects HyperCard: build stacks of interactive cards in your browser with a friendly English-like scripting language. No account, no server, no build step.">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#/library" aria-label="STACKS home">
+    <span class="brand-mark" aria-hidden="true">🕯️</span>
+    <span class="brand-name">STACKS</span>
+    <span class="brand-tag">HyperCard, resurrected</span>
+  </a>
+  <nav class="site-nav" aria-label="Main">
+    <a href="#/library">Library</a>
+    <a href="#/library" id="nav-new">+ New stack</a>
+    <a href="https://github.com/Tiannuryadins/stacks-hypercard" target="_blank" rel="noopener">GitHub ↗</a>
+  </nav>
+</header>
+
+<main id="view" class="view" aria-live="polite"></main>
+
+<footer class="site-footer">
+  <p>STACKS is free and open source (MIT). Your stacks never leave your browser — no account, no server, no tracking.</p>
+  <p>Built for <a href="https://kiroween.devpost.com/">Kiroween 2026</a> with Kiro (specs, steering, hooks, CLI). HyperCard was created by Bill Atkinson at Apple, 1987.</p>
+</footer>
+
+<div id="dialog-overlay" class="dialog-overlay" hidden>
+  <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-text">
+    <p id="dialog-text" class="dialog-text"></p>
+    <button id="dialog-ok" class="btn btn-primary" type="button">OK</button>
+  </div>
+</div>
+
+<div id="toast" class="toast" role="status" hidden></div>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
